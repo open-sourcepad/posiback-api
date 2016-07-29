@@ -13,6 +13,8 @@ Rails.application.routes.draw do
         member do
           put :update_password
         end
+
+        resources :feedbacks
       end
 
 

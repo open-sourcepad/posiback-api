@@ -8,6 +8,9 @@ class User < ApplicationRecord
 
   after_destroy :destroy_token
 
+  has_one :feedbacks_created, foreign_key: :nansiback_id
+  has_many :feebacks_recieved, foreign_key: :nasiback_id
+
   #
   # Finds a user given email and password
   # note: valid password method is inside authenticable
