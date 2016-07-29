@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
       end
 
-      resource :dashboard, only: :index
+      resource :dashboard, only: :show
     end # end of scope
   end
 
