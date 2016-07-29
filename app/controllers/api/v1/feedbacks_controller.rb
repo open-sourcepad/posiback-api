@@ -11,7 +11,7 @@ class Api::V1::FeedbacksController < ApiController
   end
 
   def create
-    obj = user.feedbacks_received.new(obj_params)
+    obj = collection.new(obj_params)
     obj.nansiback = current_user
 
     if obj.save
@@ -30,6 +30,10 @@ class Api::V1::FeedbacksController < ApiController
 
   def user
     @user ||= User.find(params[:user_id])
+  end
+
+  def collection
+    @collection ||= user.feedbacks_received
   end
 
   def obj_params
