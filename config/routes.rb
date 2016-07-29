@@ -20,8 +20,8 @@ Rails.application.routes.draw do
 
       end
 
-
-    end
+      resource :dashboard, only: :index
+    end # end of scope
   end
 
   get "*path" => "application#index"
