@@ -8,8 +8,8 @@ class User < ApplicationRecord
 
   after_destroy :destroy_token
 
-  has_one :feedbacks_created, foreign_key: :nansiback_id
-  has_many :feebacks_recieved, foreign_key: :nasiback_id
+  has_one :feedbacks_created, foreign_key: :nansiback_id, class_name: 'Feedback'
+  has_many :feedbacks_received, foreign_key: :nasiback_id, class_name: 'Feedback'
 
   #
   # Finds a user given email and password
