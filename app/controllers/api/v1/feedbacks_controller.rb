@@ -2,7 +2,7 @@ class Api::V1::FeedbacksController < ApiController
 
 
   def index
-    render json: collection
+    render json: {feedbacks: collection}
   end
 
   def show
