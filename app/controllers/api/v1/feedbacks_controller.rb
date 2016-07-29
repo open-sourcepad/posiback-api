@@ -33,7 +33,7 @@ class Api::V1::FeedbacksController < ApiController
   end
 
   def obj_params
-    params.require(:feedback).permit(*%i(content))
+    params.require(:feedback).permit(*%i(content category))
   end
 
 
