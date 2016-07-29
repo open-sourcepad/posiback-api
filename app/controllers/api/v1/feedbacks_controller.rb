@@ -11,7 +11,7 @@ class Api::V1::FeedbacksController < ApiController
   end
 
   def create
-    obj = user.feedbacks.new(obj_params)
+    obj = user.feedbacks_received.new(obj_params)
     obj.nansiback = current_user
 
     if obj.save
