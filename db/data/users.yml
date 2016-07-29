@@ -1,0 +1,41 @@
+-
+  email: 'admin@posiback.com'
+  password: 'password'
+  firs_name: 'Admin'
+  last_name: 'Posiback'
+
+-
+  email: 'michaels@sourcepad.com'
+  password: 'password'
+  first_name: 'Michael'
+  last_name: 'Suelto'
+
+-
+  email: 'marka@sourcepad.com'
+  password: 'password'
+  first_name: 'Mark'
+  last_name: 'Aventura'
+
+-
+  email: 'alving@sourcepad.com'
+  password: 'password'
+  first_name: 'Alvin'
+  last_name: 'Garcia'
+
+-
+  email: 'markg@sourcepad.com'
+  password: 'password'
+  first_name: 'Mark'
+  last_name: 'Gonzales'
+
+-
+  email: 'tjo@sourcepad.com'
+  password: 'password'
+  first_name: 'Teejay'
+  last_name: 'Obazee'
+
+-
+  email: 'ayrap@sourcepad.com'
+  password: 'password'
+  first_name: 'Ayra'
+  last_name: 'Panganiba-Obazee'
