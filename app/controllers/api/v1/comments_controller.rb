@@ -1,0 +1,3 @@
+class CommentsController < ApiController
+  
+end

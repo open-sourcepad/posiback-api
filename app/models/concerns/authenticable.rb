@@ -8,9 +8,11 @@ module Authenticable
     def find_by_valid_token request_details
       # NOTE: find() raises 404 when resource was not found
       # Use where instead
-      user = User.where(id: request_details[:user_id])[0]
+      # user = User.where(id: request_details[:user_id])[0]
+      user = User.where(access_token: request_details[:access_token])[0]
       return nil unless user.present?
-      return user if user.access_token == request_details[:access_token]
+      return user if user.present?
+      # return user if user.access_token == request_details[:access_token]
     end
 
     private
