@@ -32,7 +32,7 @@ module PosibackApi
     config.middleware.delete "ActionDispatch::Session::CookieStore"
     config.middleware.delete "ActionDispatch::Flash"
 
-    config.serve_static_files = true
+    config.public_file_server.enabled = true
 
     config.autoload_paths += Dir[Rails.root.join('app', 'models', '{**}')]
     config.autoload_paths += Dir[Rails.root.join('app', 'controllers', '{**}')]

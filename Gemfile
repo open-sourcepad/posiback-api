@@ -11,6 +11,7 @@ gem 'sidekiq'
 gem 'sidekiq-failures'
 gem 'whenever'
 gem 'rack-cors', :require => 'rack/cors'
+gem 'gcm'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
