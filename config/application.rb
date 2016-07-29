@@ -36,7 +36,8 @@ module PosibackApi
 
     config.autoload_paths += Dir[Rails.root.join('app', 'models', '{**}')]
     config.autoload_paths += Dir[Rails.root.join('app', 'controllers', '{**}')]
-    config.autoload_paths += Dir[Rails.root.join('app', 'services', '{**}')]
+    # config.autoload_paths += Dir[Rails.root.join('app', 'services', '{**}')]
+    config.autoload_paths << Rails.root.join('app/services/**')
 
     config.session_store :disabled
   end
