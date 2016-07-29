@@ -6,7 +6,7 @@ class User < ApplicationRecord
   validate :validate_password_presence
   validate :validate_password_length
 
-  after_destroy :destroy_token
+  # after_destroy :destroy_token
 
   has_one :feedbacks_created, foreign_key: :nansiback_id, class_name: 'Feedback'
   has_many :feedbacks_received, foreign_key: :nasiback_id, class_name: 'Feedback'
