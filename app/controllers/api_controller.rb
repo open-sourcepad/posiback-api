@@ -1,4 +1,4 @@
-class ApiController < ActionController::Base
+class ApiController < ApplicationController
   include Authenticator
   include MetadataBuilder
   include CommonAction
