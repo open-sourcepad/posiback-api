@@ -26,5 +26,18 @@ module PosibackApi
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+    MultiJson.engine = :Oj
+
+    config.middleware.delete "ActionDispatch::Cookies"
+    config.middleware.delete "ActionDispatch::Session::CookieStore"
+    config.middleware.delete "ActionDispatch::Flash"
+
+    config.serve_static_files = true
+
+    config.autoload_paths += Dir[Rails.root.join('app', 'models', '{**}')]
+    config.autoload_paths += Dir[Rails.root.join('app', 'controllers', '{**}')]
+    config.autoload_paths += Dir[Rails.root.join('app', 'services', '{**}')]
+
+    config.session_store :disabled
   end
 end
