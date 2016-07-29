@@ -10,7 +10,7 @@ class User < ApplicationRecord
 
   has_one :feedbacks_created, foreign_key: :nansiback_id, class_name: 'Feedback'
   has_many :feedbacks_received, foreign_key: :nasiback_id, class_name: 'Feedback'
-
+  has_many :comments_created, foreign_key: :user_id, class_name: 'Comment'
   #
   # Finds a user given email and password
   # note: valid password method is inside authenticable
